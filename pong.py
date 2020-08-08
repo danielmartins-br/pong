@@ -1,4 +1,5 @@
 import turtle
+import os
 
 janela = turtle.Screen()
 janela.title("Pong by printf")
@@ -97,10 +98,12 @@ while True:
      if bola.ycor() > 290:
           bola.sety(290)
           bola.ey *= -1
+          os.system("aplay som.wav&")
 
      if bola.ycor() < -290:
           bola.sety(-290)
           bola.ey *= -1
+          os.system("aplay som.wav&")
 
      if bola.xcor() > 390:
           bola.goto(0,0)
@@ -120,7 +123,10 @@ while True:
      if (bola.xcor() > 340 and bola.xcor() < 350) and (bola.ycor() < player_b.ycor() + 40 and bola.ycor() > player_b.ycor() -40):
           bola.setx(340)
           bola.ex *= -1
+          os.system("aplay som.wav&")
 
      if (bola.xcor() < -340 and bola.xcor() > -350) and (bola.ycor() < player_a.ycor() + 40 and bola.ycor() > player_a.ycor() -40):
           bola.setx(-340)
           bola.ex *= -1
+          os.system("aplay som.wav&")
+
