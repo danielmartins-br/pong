@@ -15,8 +15,8 @@ player_a = turtle.Turtle() #objeto do player A
 player_a.speed(0)
 player_a.shape("square")
 player_a.color("white")
-player_a.shapesize(stretch_wid=4, stretch_len=1) #tamanho do player
-player_a.penup()
+player_a.shapesize(stretch_wid=4, stretch_len=0.7) #tamanho do player
+player_a.penup() #desativa desenhos no canvas
 player_a.goto(-380,0)
 
 #Player B
@@ -24,19 +24,28 @@ player_b = turtle.Turtle() #objeto do player B
 player_b.speed(0)
 player_b.shape("square")
 player_b.color("white")
-player_b.shapesize(stretch_wid=4, stretch_len=1) #tamanho do player
-player_b.penup()
+player_b.shapesize(stretch_wid=4, stretch_len=0.7) #tamanho do player
+player_b.penup() #desativa desenhos no canvas
 player_b.goto(380,0)
 
+#Rede
+rede = turtle.Turtle()
+rede.speed(0)
+rede.shape("square")
+rede.color("white")
+rede.shapesize(stretch_wid=30, stretch_len=0.1)
+rede.goto(0,0)
+
 #Bola
-bola = turtle.Turtle() #objeto da bola
+bola = turtle.Turtle() #objeto bola
 bola.speed(0)
 bola.shape("square")
 bola.color("white")
+bola.shapesize(stretch_wid=0.8, stretch_len=0.8)
 bola.penup()
 bola.goto(0,0)
-bola.ex = 0.1 #define a velocidade da bola no eixo x e y na velocidade de 2 pixels 
-bola.ey = 0.1
+bola.ex = 0.2 #define a velocidade da bola no eixo x e y 
+bola.ey = 0.2
 
 #Placar
 placar = turtle.Turtle()
@@ -45,8 +54,7 @@ placar.color("white")
 placar.penup()
 placar.hideturtle()
 placar.goto(0, 260)
-placar.write("Player A: 0 PlayerB: 0", align="center", font=("Courier",24, "normal"))
-
+placar.write("0   0", align="center", font=("Courier",18, "normal"))
 
 #Movimento do Player A
 def player_a_up():
@@ -70,14 +78,12 @@ def player_b_down():
      x -= 20
      player_b.sety(x)
 
-
 #Mapeamento de Teclado
 janela.listen()
 janela.onkeypress(player_a_up, "w")
 janela.onkeypress(player_a_down, "s")
 janela.onkeypress(player_b_up, "Up")
 janela.onkeypress(player_b_down, "Down")
-
 
 #loop principal do game
 while True:
@@ -96,21 +102,19 @@ while True:
           bola.sety(-290)
           bola.ey *= -1
 
-
      if bola.xcor() > 390:
           bola.goto(0,0)
           bola.ex *= -1
           score_a += 1
           placar.clear()
-          placar.write("Player A: {}  PlayerB: {}".format(score_a,score_b), align="center",font=("Courier",24, "normal"))
+          placar.write("{}  {}".format(score_a,score_b), align="center",font=("Courier",18, "normal"))
 
      if bola.xcor() < -390:
           bola.goto(0,0)
           bola.ex *= -1
           score_b += 1
           placar.clear()
-          placar.write("Player A: {}  PlayerB: {}".format(score_a,score_b), align="center",font=("Courier",24, "normal"))
-
+          placar.write("{}  {}".format(score_a,score_b), align="center",font=("Courier",18, "normal"))
 
      #Colisao da bola com os players
      if (bola.xcor() > 340 and bola.xcor() < 350) and (bola.ycor() < player_b.ycor() + 40 and bola.ycor() > player_b.ycor() -40):
@@ -120,5 +124,3 @@ while True:
      if (bola.xcor() < -340 and bola.xcor() > -350) and (bola.ycor() < player_a.ycor() + 40 and bola.ycor() > player_a.ycor() -40):
           bola.setx(-340)
           bola.ex *= -1
-
-
