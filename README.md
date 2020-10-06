@@ -13,7 +13,7 @@ Projeto final do vídeo:
 
 Minha Versão:
 
-![](https://i.imgur.com/aujDZJq.png =200x200)
+<img src="https://i.imgur.com/aujDZJq.png" width="500">
 
 Execução:
 
