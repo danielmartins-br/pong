@@ -1,5 +1,4 @@
-#pong
-#s
+# pong
 
 Projeto feito com base em um vídeo do canal  [freeCodeCamp.org](https://www.youtube.com/watch?v=C6jJg9Zan7w "freeCodeCamp.org") onde ensinam a recriar o jogo [Pong](https://pt.wikipedia.org/wiki/Pong "Pong")   com uma biblioteca do Python chamada [Turtle](https://realpython.com/beginners-guide-python-turtle/ "Turtle").
 
