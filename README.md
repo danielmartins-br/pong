@@ -13,7 +13,7 @@ Projeto final do vídeo:
 
 Minha Versão:
 
-<img src="https://i.imgur.com/aujDZJq.png" width="480">
+<img src="https://i.imgur.com/aujDZJq.png" width="460">
 
 Execução:
 
