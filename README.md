@@ -1,4 +1,5 @@
 #pong
+
 Projeto feito com base em um vídeo do canal  [freeCodeCamp.org](https://www.youtube.com/watch?v=C6jJg9Zan7w "freeCodeCamp.org") onde ensinam a recriar o jogo [Pong](https://pt.wikipedia.org/wiki/Pong "Pong")   com uma biblioteca do Python chamada [Turtle](https://realpython.com/beginners-guide-python-turtle/ "Turtle").
 
 O jogo ainda está bem simples , deve ser controlado por duas pessoas e funciona somente em Linux por causa da biblioteca **[os](https://linuxconfig.org/python-os-module "os")** que usei para controlar os sons  mas planejo implementar uma espécie de **AI** que vá seguindo a bola e torne possível rodar o game para um jogador.
