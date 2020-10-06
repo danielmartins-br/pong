@@ -86,7 +86,7 @@ janela.onkeypress(player_a_down, "s")
 janela.onkeypress(player_b_up, "Up")
 janela.onkeypress(player_b_down, "Down")
 
-#loop principal do game
+#Loop principal do game
 while True:
      janela.update()
 
